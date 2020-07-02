@@ -1,0 +1,7 @@
+@charset "UTF-8";
+@use '@scss/colors' as colors;
+
+.Box {
+  background-color: colors.$shokkingPink;
+  color: green;
+}

@@ -113,7 +113,7 @@ module.exports = ({ outputFile, assetFile, envFilePath, assetPath }) => {
         '@scss': path.resolve(__dirname, '../src/scss'),
         '@assets': path.resolve(__dirname, '../src/assets'),
       },
-      extensions: ['.ts', '.js', '.tsx', '.jsx'],
+      extensions: ['.ts', '.js', '.tsx', '.jsx', '.scss', '.css'],
     },
   };
 };

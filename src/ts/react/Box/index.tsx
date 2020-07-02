@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 import { render } from 'react-dom';
+import './style';
 
 type tBox = {
   width: number;
@@ -8,7 +9,11 @@ type tBox = {
 };
 const Box = ({ width, height }: tBox) => {
   const style = { width, height };
-  return <div style={style}>Box</div>;
+  return (
+    <div className="Box" style={style}>
+      Box
+    </div>
+  );
 };
 
 export const renderBox = (props: tBox, container: Element) =>
