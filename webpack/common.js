@@ -36,10 +36,13 @@ module.exports = ({ outputFile, assetFile, envFilePath, assetPath }) => {
           exclude: /node_modules/,
         },
         {
-          test: /\.(ts|js)$/,
+          test: /\.(ts|js|tsx|jsx)$/,
           // tsからjsの変換はbabel-loaderで行う
           // 型チェックはForkTsCheckerWebpackPluginで行う
-          use: 'babel-loader',
+          use: [
+            'babel-loader',
+            'ts-loader'
+          ],
           exclude: /node_modules/,
         },
         {
@@ -110,7 +113,7 @@ module.exports = ({ outputFile, assetFile, envFilePath, assetPath }) => {
         '@scss': path.resolve(__dirname, '../src/scss'),
         '@assets': path.resolve(__dirname, '../src/assets'),
       },
-      extensions: ['.ts', '.js'],
+      extensions: ['.ts', '.js', '.tsx', '.jsx'],
     },
   };
 };
