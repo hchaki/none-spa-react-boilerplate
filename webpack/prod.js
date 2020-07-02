@@ -25,7 +25,7 @@ module.exports = (env) => {
         new HtmlWebpackPlugin({
           template: path.resolve(__dirname, `../src/pages/${key}.html`),
           // 出力されるファイル名
-          filename: `./pages/${key}.html`,
+          filename: `${key}.html`,
           // headにjsファイルを入れたい場合はheadを指定
           inject: 'body',
           minify: {
